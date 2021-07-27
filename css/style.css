@@ -155,7 +155,7 @@
     vertical-align: top;
 }
 
-.header_description, .header_addres, .header_time {
+.header_description, .header_addres, .header_time, .header_feedback {
     position: relative;
     top: -5px;
 }
