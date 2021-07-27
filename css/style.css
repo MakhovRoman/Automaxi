@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 145px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 27.58621% 1fr;
+}
+
+.header_top {
+    background-color: rgb(0, 0, 0);
+}
+
+.header_topWrapper, .header_botWrapper {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_nav {
+    height: 100%;
+    width: fit-content;
+}
+
+.header_linkList {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header_links {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.header_item:hover>.header_links {
+    color: rgb(250, 153, 7);
+    transition: 0.3s ease-in-out;
+}
+
+.header_item {
+    height: 100%;
+}
+
+.header_item + .header_item {
+    margin-left: 35px;
+}
+
+.header_subLinkList {
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+    width: max-content;
+    position: absolute;
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    padding: 0 5px;
+    visibility: hidden;
+}
+
+.header_subLinkList > .header_item {
+    margin-left: 0;
+    height: 40px;
+    width: 100%;
+}
+
+.header_item:hover > .header_subLinkList {
+    transform: rotateX(0deg);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user hr {
+    height: 100%;
+    margin: 0 20px;
+}
+
+.user_link {
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    align-items: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 12px;
+    transition: 0.3s linear;
+}
+
+.user_link img {
+    display: block;
+    padding-right: 15px;
+}
+
+.user_link:hover {
+    color: rgb(250, 153, 7);
+    transition: 0.3s linear;
+}
+
+.header_bot {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.header_botWrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 21.31944% auto 11.99306% auto 12.75694% auto 7.916667% 4.7222% 12.4356%;
+    height: max-content;
+    margin-top: 20px;
+}
+
+.header_homeLink {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 32.57329% auto 61.88925%;
+
+}
+
+.header_logo {
+    display: block;
+    height: max-content;
+}
+
+.header_description {
+    grid-column: 3/4;
+    font-size: 14px;
+    height: fit-content;
+    line-height: 21px;
+    vertical-align: top;
+}
+
+.header_description, .header_addres, .header_time {
+    position: relative;
+    top: -5px;
+}
+
+.header_addres {
+    grid-column: 3/4;
+}
+
+.header_addres+.header_addres {
+    grid-column: 5/6;
+}
+
+.header_addres img {
+    display: inline-block;
+    position: relative;
+    top: -17px;
+}
+
+.header_text, .header_time {
+    display: inline-block;
+    font-size: 14px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10px;
+    line-height: 21px;
+}
+
+.header_label {
+    color: rgb(143, 155, 171);
+}
+
+.city {
+    color: rgb(255, 0, 0);
+}
+
+.header_time {
+    margin-left: 0;
+    grid-column: 7/8;
+}
+
+.header_feedback {
+    grid-column: 9/10;
+}
+
+.header_number, .header_whatsapp, .header_callback {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    display: block;
+    text-align: right;
+    font-size: 14px;
+}
+
+.header_whatsapp, .header_callback {
+    margin-top: 3px;
+}
+
+.header_number {
+    font-size: 18px;
+}
+
+.header_whatsapp, .header_number {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_whatsapp img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.header_whatsappText {
+    display: inline-block;
+}
