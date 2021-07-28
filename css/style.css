@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 
+:root {
+    --font-size-14: 14px;
+    --header_addres-padding: 10px;
+    --header-line-heigth: 21px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +25,11 @@
     background-color: rgb(0, 0, 0);
 }
 
+.contentWidth {
+    width: 1440px;
+}
+
 .header_topWrapper, .header_botWrapper {
-    max-width: 1440px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -128,14 +137,12 @@
 }
 
 .header_botWrapper {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 21.31944% auto 11.99306% auto 12.75694% auto 7.916667% 4.7222% 12.4356%;
-    height: max-content;
+
     margin-top: 20px;
 }
 
 .header_homeLink {
+    width: 307px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 32.57329% auto 61.88925%;
@@ -149,9 +156,9 @@
 
 .header_description {
     grid-column: 3/4;
-    font-size: 14px;
+    font-size: var(--font-size-14);
     height: fit-content;
-    line-height: 21px;
+    line-height: var(--header-line-heigth);
     vertical-align: top;
 }
 
@@ -176,11 +183,11 @@
 
 .header_text, .header_time {
     display: inline-block;
-    font-size: 14px;
+    font-size: var(--font-size-14);
     width: fit-content;
     height: fit-content;
-    margin-left: 10px;
-    line-height: 21px;
+    margin-left: var(--header_addres-padding);
+    line-height: var(--header-line-heigth);
 }
 
 .header_label {
@@ -206,7 +213,7 @@
     width: 100%;
     display: block;
     text-align: right;
-    font-size: 14px;
+    font-size: var(--font-size-14);
 }
 
 .header_whatsapp, .header_callback {
@@ -229,4 +236,62 @@
 
 .header_whatsappText {
     display: inline-block;
+}
+
+.header_whatsapp:hover > .header_whatsappText, .header_callback:hover, .header_number:hover {
+    color:rgb(250, 153, 7);
+    transition: 0.1s linear;
+}
+
+.header_callback {
+    text-decoration: underline;
+    color: rgb(35, 82, 124);
+}
+
+/* ===========   MEDIA   =========== */
+@media (max-width: 1500px) {
+    .contentWidth {
+        width: 96%;
+    }
+
+
+}
+
+@media (max-width: 1199px) {
+    :root {
+        --font-size-14: 1.166667vw;
+        --header_addres-padding: 0.83333vw;
+        --header-line-heigth: 1.75vw;
+    }
+
+    .header_addres img {
+        width: 11%;
+    }
+
+    .header_number {
+        font-size: 1.5vw;
+    }
+
+    .header_homeLink {
+        width: 33vw;
+    }
+
+    .header_whatsapp img {
+        max-width: 100%;
+        width: 9.52%;
+    }
+}
+
+@media (max-width: 800px) {
+    .header_links {
+        font-size: 1.5vw;
+    }
+
+    .header_item + .header_item {
+        margin-left: 4.375vw;
+    }
+
+    .header_subLinkList > .header_item {
+        margin-left: 0;
+    }
 }
