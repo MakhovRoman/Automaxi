@@ -389,11 +389,79 @@
 
 @media (max-width: 768px) {
     .contentWidth {
-        width: 80.72917vw;
+        width: 620px;
     }
 
     .reitings_wrapper {
         display: grid;
-        grid-template-columns: repeat();
+        grid-template-columns: repeat(2, 48.3871%);
+        gap: 20px;
+        justify-content: unset;
+    }
+
+    .reitings_blocks {
+        width: 100%;
+    }
+
+    .header_addres+.header_addres, .header_description {
+        display: none;
+    }
+
+    .header_homeLink {
+        display: block;
+        width: fit-content;
+    }
+
+    :root {
+        --font-size-14: 12px;
+        --header-line-heigth: 16.84px;
+        --header_addres-padding: 0;
+    }
+
+    .header_number {
+        font-size: 16px;
+    }
+
+    .header_addres img {
+        display: none;
+    }
+
+    .header_links {
+        font-size: 11px;
+    }
+
+    .header_item + .header_item {
+        margin-left: 20px;
+    }
+
+    .user {
+        margin-left: 0;
+    }
+
+    .basket {
+        display: none;
+    }
+
+    .user_link img {
+        padding-right: 8px;
+    }
+
+    .user_item:last-child img {
+        padding-right: 0;
+    }
+
+    .reitings_wrapper {
+        margin-top: 20px;
+    }
+
+    .user hr {
+        margin: 0 15px;
+    }
+
+}
+
+@media (max-width: 678px) {
+    .contentWidth {
+        width: 91.45vw;
     }
 }
