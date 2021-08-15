@@ -14,27 +14,33 @@
             <section class="header_top">
                 <div class="header_topWrapper contentWidth">
                     <nav class="header_nav">
-                        <ul class="header_linkList">
-                            <li class="header_item"><a href="" class="header_links">Каталог <span class="header_triangel"></span>&#9662;</span></a>
-                                <ul class="header_linkList header_subLinkList">
-                                    <li class="header_item"><a href="" class="header_links">Лобовые стекла</a></li>
-                                    <li class="header_item"><a href="" class="header_links">Боковые стекла</a></li>
-                                    <li class="header_item"><a href="" class="header_links">Задние стекла</a></li>
-                                    <li class="header_item"><a href="" class="header_links">Молдинги, датчики</a></li>
-                                    <li class="header_item"><a href="" class="header_links">Товары для установки</a></li>
-                                </ul>
-                            </li>
-                            <li class="header_item"><a href="" class="header_links">О компании</a></li>
-                            <li class="header_item"><a href="" class="header_links">Услуги <span class="header_triangel">&#9662;</span></a>
-                                <ul class="header_linkList header_subLinkList">
-                                    <li class="header_item"><a href="" class="header_links">Установка автостекла</a></li>
-                                    <li class="header_item"><a href="" class="header_links">Ремонт сколов и трещин</a></li>
-                                </ul>
-                            </li>
-                            <li class="header_item"><a href="" class="header_links">Партнерам</a></li>
-                            <li class="header_item"><a href="" class="header_links">Доставка</a></li>
-                            <li class="header_item"><a href="" class="header_links">Контакты</a></li>
-                        </ul>
+                        <div class="header_burger">
+                            <input type="checkbox" id="header_toogle">
+                            <label for="header_toogle" class="header_button">
+                                <span></span>
+                            </label>
+                            <ul class="header_linkList">
+                                <li class="header_item"><a href="" class="header_links">Каталог <span class="header_triangel">&#9662;</span></a>
+                                    <ul class="header_linkList header_subLinkList">
+                                        <li class="header_item"><a href="" class="header_links">Лобовые стекла</a></li>
+                                        <li class="header_item"><a href="" class="header_links">Боковые стекла</a></li>
+                                        <li class="header_item"><a href="" class="header_links">Задние стекла</a></li>
+                                        <li class="header_item"><a href="" class="header_links">Молдинги, датчики</a></li>
+                                        <li class="header_item"><a href="" class="header_links">Товары для установки</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header_item"><a href="" class="header_links">О компании</a></li>
+                                <li class="header_item"><a href="" class="header_links">Услуги <span class="header_triangel">&#9662;</span></a>
+                                    <ul class="header_linkList header_subLinkList">
+                                        <li class="header_item"><a href="" class="header_links">Установка автостекла</a></li>
+                                        <li class="header_item"><a href="" class="header_links">Ремонт сколов и трещин</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header_item"><a href="" class="header_links">Партнерам</a></li>
+                                <li class="header_item"><a href="" class="header_links">Доставка</a></li>
+                                <li class="header_item"><a href="" class="header_links">Контакты</a></li>
+                            </ul>
+                        </div>
                     </nav>
 
                         <div class="user">
@@ -48,7 +54,12 @@
             <section class="header_bot">
                 <div class="header_botWrapper contentWidth">
                     <div class="header_homeLink">
-                        <a href="index.html" class="header_logo"><img src="../Automaxi/images/Desktop/Logo.png" alt=""></a>
+                        <a href="index.html" class="header_logo">
+                            <picture>
+                                <source srcset="../Automaxi/images/Desktop/Logo.png" media="(min-width: 377px)">
+                                <img src="../Automaxi/images/Mobile/logo_small.png" alt="">
+                            </picture>
+                        </a>
                         <p class="header_description">Продаем и устанавливаем автостекла на любой вид автотранспорта с 1995 года</p>
                     </div>
                     <div class="header_addres">

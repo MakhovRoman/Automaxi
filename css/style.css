@@ -43,6 +43,14 @@
     width: fit-content;
 }
 
+.header_burger {
+    height: 100%;
+}
+
+#header_toogle {
+    display: none;
+}
+
 .header_linkList {
     height: 100%;
     list-style: none;
@@ -167,6 +175,7 @@
 .header_description, .header_addres, .header_time, .header_feedback {
     position: relative;
     top: -5px;
+    height: fit-content;
 }
 
 .header_addres {
@@ -224,6 +233,7 @@
 
 .header_number {
     font-size: 18px;
+    font-weight: 500;
 }
 
 .header_whatsapp, .header_number {
@@ -464,4 +474,91 @@
     .contentWidth {
         width: 91.45vw;
     }
+
+    .header_logo {
+        width: 14.75vw;
+    }
+
+    .header_logo img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    :root {
+        --font-size-14: 1.7966vw;
+    }
+
+    .header_number {
+        font-size: 2.36vw;
+    }
+
+    .header_item + .header_item {
+        margin-left: 2.95vw;
+    }
+
+    .header_links, .user_link {
+        font-size: 1.6224vw;
+    }
+
+    .user_link img {
+        width: 100%;
+        height: auto;
+        max-width: 2.95vw;
+    }
+
+    .user_link:first-child img {
+        padding-left: 1.18vw;
+    }
+
+    .reitings_wrapper {
+        gap: 2.95vw;
+    }
+}
+
+@media (max-width: 375px) {
+    #header_toogle {
+        display: block;
+        opacity: 0;
+    }
+
+    .header_button {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -5px;
+        left: 0px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .header_button > span, .header_button > span::after, .header_button > span::before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .header_button > span::before {
+        content: "";
+        top: -8px;
+    }
+
+    .header_button > span::after {
+        content: "";
+        top: 8px;
+    }
+
+    .header_linkList {
+        flex-direction: column;
+        z-index: 10;
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        background-color: rgb(143, 155, 171);
+    }
+
+
 }
