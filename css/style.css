@@ -521,11 +521,56 @@
         opacity: 0;
     }
 
+    .contentWidth {
+        width: 80%;
+    }
+
+    .header {
+        height: 103px;
+        grid-template-rows: 30.83% 1fr;
+    }
+
+    .header_time,  .header_feedbackTriangle,
+    .header_callback, .header_whatsapp img {
+        display: none;
+    }
+
+    .header_number {
+        justify-content:space-evenly;
+        font-size: 12px;
+    }
+
+    .header_whatsapp {
+        text-decoration: underline;
+        margin-top: 9px;
+    }
+
+    .user_link {
+        font-size: 10px;
+    }
+
+    .user_link img {
+        max-width: 16px;
+    }
+
+    .city {
+        font-weight: 600 ;
+    }
+
+    .header_homeLink, .header_botWrapper {
+        height: fit-content;
+    }
+
+    :root {
+        --font-size-14: 10px;
+        --header-line-heigth: 12px;
+    }
+
     .header_button {
         display: flex;
         align-items: center;
         position: relative;
-        top: -5px;
+        top: -9px;
         left: 0px;
         width: 26px;
         height: 26px;
@@ -543,22 +588,89 @@
 
     .header_button > span::before {
         content: "";
-        top: -8px;
+        top: -5px;
     }
 
     .header_button > span::after {
         content: "";
-        top: 8px;
+        top: 5px;
     }
 
     .header_linkList {
         flex-direction: column;
         z-index: 10;
         position: fixed;
-        width: 100%;
+        left: 0;
+        margin-top: -7px;
+        width: 40%;
         height: fit-content;
         background-color: rgb(143, 155, 171);
+        align-items: baseline;
+        visibility: hidden;
     }
 
+    .header_item + .header_item {
+        margin-left: 0;
+    }
 
+    .header_links {
+        font-size: 16px;
+        height: 40px;
+        margin-left: 4.2667vw;
+    }
+
+    .header_item {
+        width: 100%;
+        transition: 0.3s ease-in-out;
+    }
+
+    .header_item:hover {
+        background-color: coral;
+        transition: 0.3ms ease-in-out;
+    }
+
+    .header_item:hover .header_links {
+        color: rgb(255, 255, 255);
+    }
+
+    .header_triangel {
+        margin-left: 10px;
+        margin-top: 3px;
+        color: transparent;
+        background-color: rgb(255, 255, 255);
+        clip-path: polygon(100% 50%, 0 0, 0 100%);
+        font-size: 0;
+        width: 6px;
+        height: 10px;
+    }
+
+    .header_subLinkList {
+        left: 40%;
+        width: 50%;
+        padding: 0;
+        transform: rotateY(-90deg);
+        margin-top: -40px;
+    }
+
+    .header_subLinkList .header_links {
+        font-size: 12px;
+    }
+
+    #header_toogle:checked ~ .header_button > span {
+        transform: rotate(45deg);
+    }
+
+    #header_toogle:checked ~ .header_button > span::after {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #header_toogle:checked ~ .header_button > span::before {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #header_toogle:checked ~ .header_linkList {
+        visibility: visible;
+    }
 }
