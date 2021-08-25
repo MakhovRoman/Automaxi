@@ -462,6 +462,22 @@
     top: 43px;
 }
 
+.feedback_submit {
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.feedback_submit:hover {
+    color: rgb(250, 153, 7);
+    transition: 0.1s linear;
+}
+
+.feedback_submit:active {
+    color: rgb(0, 0, 0);
+    background-color: rgb(250, 153, 7);
+    transition: 0.1s linear;
+}
+
 .map {
     max-width: 1440px;
     width: 100%;
