@@ -254,7 +254,9 @@
     display: inline-block;
 }
 
-.header_whatsapp:hover > .header_whatsappText, .header_callback:hover, .header_number:hover {
+.header_whatsapp:hover > .header_whatsappText,
+.header_callback:hover, .header_number:hover,
+.feedback_link:hover > .feedback_numberText {
     color:rgb(250, 153, 7);
     transition: 0.1s linear;
 }
@@ -355,6 +357,8 @@
 .feedback_wrapper {
     width: fit-content;
     height: 100%;
+    display: flex;
+    margin: 0 auto;
 }
 
 .feedback_item {
@@ -362,10 +366,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .feedback_application {
-    width: 350px;
+    max-width: 350px;
 }
 
 .feedback_header {
@@ -401,14 +406,14 @@
 
 .feedback_phone{
     padding-left: 16.5px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 2px solid  rgb(255, 255, 255);
 }
 
-.feedback_phone:invalid {
+.feedback_phone:invalid:not(:placeholder-shown) {
     border-color: rgb(255, 0, 0);
 }
 
-.feedback_phone:valid {
+.feedback_phone:valid:not(:placeholder-shown) {
     border-color: seagreen;
 }
 
@@ -416,8 +421,45 @@
     color: rgb(180, 180, 180);
 }
 
-.feedback_phone:focus::placeholder {
-    color: transparent;
+.feedback_item + .feedback_item {
+    margin-left: 90px;
+}
+
+.feedback_tel {
+    max-width: 294px;
+}
+
+.feedback_tel .feedback_header {
+    line-height: 31px;
+}
+
+.feedback_link {
+    text-decoration: none;
+    display: flex;
+    align-items:flex-end;
+}
+
+.feedback_link:first-child {
+    margin-bottom: 20px;
+}
+
+.feedback_numberText {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-left: 17px;
+    vertical-align: bottom;
+    transition: 0.1s linear;
+}
+
+.feedback_numberWhatsapp {
+    font-size: 16px;
+}
+
+.feedback_arrow {
+    position: absolute;
+    right: 10px;
+    top: 43px;
 }
 
 .map {
