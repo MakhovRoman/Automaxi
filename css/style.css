@@ -345,15 +345,16 @@
 .feedback {
     background-color: rgb(51, 51, 51);
     margin-top: 80px;
+    padding-top: 33px;
+    padding-bottom: 40px;
     height: 250px;
     color: rgb(255, 255, 255);
+    box-sizing: border-box;
 }
 
 .feedback_wrapper {
     width: fit-content;
-    margin-top: 35px;
-    margin-bottom: 40px;
-    height: auto;
+    height: 100%;
 }
 
 .feedback_item {
@@ -377,6 +378,46 @@
 
 .feedback_note {
     font-size: 12px;
+    margin-top: 12px;
+}
+
+.feedback_form {
+    height: 40px;
+    display: grid;
+    grid-template-columns: 57.14% 1fr;
+    grid-template-rows: 1fr;
+}
+
+.feedback_input {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+.feedback_submit {
+    background-color: rgb(90, 161, 225);
+    color: white;
+}
+
+.feedback_phone{
+    padding-left: 16.5px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.feedback_phone:invalid {
+    border-color: rgb(255, 0, 0);
+}
+
+.feedback_phone:valid {
+    border-color: seagreen;
+}
+
+.feedback_phone::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+.feedback_phone:focus::placeholder {
+    color: transparent;
 }
 
 .map {
