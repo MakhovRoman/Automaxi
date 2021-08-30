@@ -566,6 +566,74 @@
     color: #23527C;
 }
 
+.map_yandex {
+    width: 100%;
+    height: 550px;
+}
+
+
+.footer {
+    width: 100vw;
+    height: 260px;
+    background-color: rgb(51, 51, 51);
+}
+
+.footer_wrapper {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgb(250, 153, 7);
+    padding: 40px 0 30px 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 150px 150px 167px 133px 140px 160px 116px;
+    grid-template-rows: 1fr 27px 30px;
+    color: rgb(255, 255, 255);
+}
+
+.footer_catalog {
+    grid-column: 3/4;
+}
+
+.footer_services {
+    grid-column: 5/6;
+}
+
+.footer_info {
+    grid-column: 7/8;
+}
+
+.footer_law {
+    grid-column: 1/8;
+    grid-row: 3/4;
+    max-width: 635px;
+    color: rgb(180, 180, 180);
+}
+
+.footer_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer_logo a {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.footer_paragraph, .footer_confidentiality, .footer_law {
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.footer_confidentiality {
+    color: rgb(255, 255, 255);
+}
+
+.footer_paragraph {
+    margin: 15px 0 18px 0;
+}
+
 
 /* ===========   MEDIA   =========== */
 
@@ -614,6 +682,10 @@
 
     .map_paragraph {
         line-height: 1.527778vw;
+    }
+
+    .map_yandex {
+        height: 38.2vw;
     }
 }
 
@@ -854,6 +926,10 @@
 
     .map_city {
         font-size: 16px;
+    }
+
+    .map_yandex {
+        height: 300px;
     }
 }
 
@@ -1131,7 +1207,6 @@
 
     .map_yandex {
         height: 400px;
-        width: 100%;
     }
 
     .map_advt {
