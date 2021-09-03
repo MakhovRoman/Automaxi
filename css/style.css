@@ -612,8 +612,8 @@ body {
 }
 
 .footer_logo img {
-    max-width: 100%;
-    height: auto;
+    height: 54px;
+    width: auto;
 }
 
 .footer_logo a {
@@ -1042,6 +1042,7 @@ body {
 
     :root {
         --font-size-14: 1.7966vw;
+        --footer-grid-gap: 11.7vw;
     }
 
     .header_number {
@@ -1069,6 +1070,32 @@ body {
     .reitings_wrapper {
         gap: 2.95vw;
     }
+
+    .footer_topLink {
+        font-size: var(--font-size-14);
+    }
+
+    .footer_linkListItem {
+        font-size: 1.47vw;
+    }
+
+    .footer_linkListItem + .footer_linkListItem {
+        margin-top: 1.18vw;
+    }
+
+    .footer_paragraph, .footer_confidentiality {
+        font-size: 1.18vw;
+        line-height: 1.55vw;
+    }
+
+    .footer_paragraph {
+        margin-top: 1.47vw;
+    }
+
+    .footer_law {
+        font-size: 1.47vw;
+        line-height: 2.21vw;
+    }
 }
 
 @media (max-width: 578px) {
@@ -1090,7 +1117,7 @@ body {
     }
 
     .contentWidth {
-        width: 80%;
+        width: 80vw;
     }
 
     .header {
@@ -1351,6 +1378,64 @@ body {
 
     .map_office {
         grid-column: 1/2;
+    }
+
+    .footer_wrapper {
+        padding: 45px 0;
+        grid-template-columns: 150px 140px;
+        grid-template-rows: 116px 97px 48px;
+        grid-gap: 27px 10px;
+        width: fit-content;
+    }
+
+    .footer_catalog {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .footer_services {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .footer_info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .footer_about {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .footer_law {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    .footer_topLink {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .footer_linkListItem {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .footer_paragraph, .footer_confidentiality {
+        font-size: 8px;
+        line-height: 10.5px;
+    }
+
+    .footer_paragraph {
+        margin-top: 2px;
+    }
+
+    .footer_law {
+        font-size: 8px;
+        line-height: 12px;
+        max-width: 300px;
     }
 }
 
