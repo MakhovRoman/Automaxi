@@ -31,7 +31,7 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-.contentWidth {
+.contentWidth, .contentWidth_footer {
     width: 1160px;
     margin: 0 auto;
 }
@@ -809,7 +809,7 @@ body {
 
 
 @media (max-width: 768px) {
-    .contentWidth {
+    .contentWidth, .contentWidth_footer {
         width: 620px;
     }
 
@@ -1027,7 +1027,7 @@ body {
 }
 
 @media (max-width: 678px) {
-    .contentWidth {
+    .contentWidth, .contentWidth_footer {
         width: 91.45vw;
     }
 
