@@ -271,6 +271,20 @@ body {
     color: rgb(35, 82, 124);
 }
 
+.banner {
+    margin-top: 80px;
+}
+
+.banner_wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.banner_wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
 .reitings {
     height: auto;
 }
@@ -813,6 +827,10 @@ body {
         width: 620px;
     }
 
+    .banner {
+        margin-top: 68px;
+    }
+
     .reitings_wrapper {
         display: grid;
         grid-template-columns: repeat(2, 48.3871%);
@@ -1281,6 +1299,10 @@ body {
         opacity: 1;
         transition: 0.3s ease-in-out;
         transform: scaleY(1);
+    }
+
+    .banner {
+        margin-top: 50px;
     }
 
     .feedback {
