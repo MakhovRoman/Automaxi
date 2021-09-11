@@ -285,6 +285,128 @@ body {
     height: auto;
 }
 
+.summary {
+    margin: 33px auto 75px auto;
+    max-width: 1160px;
+}
+
+.summary_wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 29.22% repeat(2, 1fr 29.22%);
+}
+
+.summary_item:nth-child(2) {
+    grid-column: 3/4;
+}
+
+.summary_item:nth-child(3) {
+    grid-column: 5/6;
+}
+
+.summary_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary_image {
+    display: inline-block;
+    width: 8.26%;
+}
+
+.summary_image img {
+    max-width: 100%;
+}
+
+.summary_content {
+    display: inline-block;
+    font-size: var(--map-font-size-16);
+    width: 82.6%;
+}
+
+.summary_header {
+    margin-bottom: 10px;
+}
+
+.services_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services_item {
+    height: 255px;
+    width: 48.275%;
+    background-image: url(../images/Desktop/install_glass.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: contain;
+    box-shadow: -7px 4px 12px -4px rgba(34, 60, 80, 0.2);;
+}
+
+.services_item:last-child {
+    background-image: url(../images/Desktop/repair_glass.png);
+}
+
+.services_content {
+    max-width: 260px;
+    height: fit-content;
+    margin: 29px 0 0 50px;
+}
+
+.services_item:last-child .services_content {
+    max-width: 300px;
+}
+
+.services_header {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+.services_paragraph {
+    font-size: 16px;
+    margin-bottom: 33px;
+    line-height: 22px;
+}
+
+.services_link {
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(90, 161, 225);
+    width: 77%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.services_link::before {
+    content: "";
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 153, 7);
+    transition: 0.2s ease-in-out;
+}
+
+.services_link:hover::before {
+    transform: scaleY(1);
+    transition: 0.2s ease-in-out;
+}
+
+.services_link:hover  .services_linkText {
+    color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+
+.services_linkText {
+    z-index: 3;
+    transition: 0.2s linear;
+}
+
+
 .reitings {
     height: auto;
 }
@@ -741,6 +863,34 @@ body {
         justify-content: center;
     }
 
+    .services_content {
+        width: 20.55vw;
+    }
+
+    .services_item:last-child .services_content {
+        width: 23.72vw;
+    }
+
+    .services_item {
+        height: 20.1581vw;
+    }
+
+    .services_header {
+        font-size: 1.9vw;
+        margin-bottom: 1.1vw;
+    }
+
+    .services_paragraph {
+        font-size: 1.26vw;
+        line-height: 1.73vw;
+        margin-bottom: 2.61vw;
+    }
+
+    .services_link {
+        font-size: 1.26vw;
+        height: 3.162vw;
+    }
+
     .map {
         width: 100vw;
         min-height: 300px;
@@ -888,6 +1038,69 @@ body {
 
     .user_item:last-child img {
         padding-right: 0;
+    }
+
+    .summary_wrapper {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 22px 3.55%;
+    }
+
+    .summary_item:nth-child(2) {
+        grid-column: 2/3;
+    }
+
+    .summary_item:nth-child(3) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .summary_item {
+        justify-content: unset;
+    }
+
+    .summary_content {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .services_wrapper {
+        flex-direction: column;
+    }
+
+    .services_item {
+        width: 100%;
+        height: 220px;
+    }
+
+    .services_content {
+        width: 250px;
+    }
+
+    .services_item:first-child {
+        margin-bottom: 40px;
+    }
+
+    .services_item:last-child .services_content {
+        width: 250px;
+    }
+
+    .services_header {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .services_paragraph {
+        font-size: 14px;
+        line-height: 17.5px;
+        margin-bottom: 19px;
+    }
+
+    .services_link {
+        font-size: 16px;
+        width: 200px;
+        height: 40px;
     }
 
     .reitings_wrapper {
@@ -1116,6 +1329,55 @@ body {
     }
 }
 
+@media (max-width: 663px) {
+    .summary_wrapper {
+        grid-row-gap: 3.3vw;
+    }
+
+    .summary_content {
+        font-size: 2.1vw;
+        margin-left: 2.1vw;
+    }
+
+    .summary_image {
+        width: 3.6vw;
+    }
+
+    .services_item:first-child {
+        margin-bottom: 6vw;
+    }
+
+    .services_item {
+       height: 33.1825vw;
+    }
+
+    .services_content {
+        margin: 4.38vw 0 0 7.54vw;
+    }
+
+    .services_content, .services_item:last-child .services_content {
+        width: 37.7vw;
+    }
+
+    .services_header {
+        font-size: 3.017vw;
+        line-height: 3.62vw;
+        margin-bottom: 1.81vw;
+    }
+
+    .services_paragraph {
+        font-size: 2.11vw;
+        line-height: 2.64vw;
+        margin-bottom: 2.87vw;
+    }
+
+    .services_link {
+        font-size: 2.41vw;
+        width: 30.17vw;
+        height: 6.033vw;
+    }
+}
+
 @media (max-width: 578px) {
     .feedback_wrapper {
         margin: 0 auto;
@@ -1305,6 +1567,73 @@ body {
         margin-top: 50px;
     }
 
+    .summary_wrapper {
+        width: fit-content;
+        grid-template-columns: 1fr;
+        grid-row-gap: 22px
+    }
+
+    .summary_item:nth-child(2) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .summary_item:nth-child(3) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .summary_content {
+        font-size: 14px;
+        line-height: 17.5px;
+    }
+
+    .summary_header {
+        margin-bottom: 5px;
+        line-height: 18px;
+    }
+
+    .summary_image {
+        width: 22px;
+        margin-top: 3px;
+    }
+
+    .services_item {
+        height: 224px;
+        background-image: url(../images/Mobile/install_glass_small.png);
+    }
+
+    .services_item:first-child {
+        margin-bottom: 50px;
+    }
+
+    .services_item:last-child {
+        background-image: url(../images/Mobile/repair_glass_small.png);
+    }
+
+    .services_content, .services_item:last-child .services_content {
+        width: 190px;
+    }
+
+    .services_header {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 14px;
+        font-weight: 400;
+    }
+
+    .services_paragraph {
+        font-size: 14px;
+        line-height: 17.5px;
+        margin-bottom: 13px;
+    }
+
+    .services_link {
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+
     .feedback {
         padding-bottom: 45px;
     }
@@ -1458,6 +1787,55 @@ body {
         font-size: 8px;
         line-height: 12px;
         max-width: 300px;
+    }
+}
+
+@media (max-width: 375px) {
+    .summary_content {
+        font-size: 3.73vw;
+        line-height: 4.67vw;
+    }
+
+    .summary_header {
+        line-height: 4.8vw;
+        margin-bottom: 1.3333vw;
+    }
+
+    .summary_image {
+        width: 5.87vw;
+    }
+
+    .summary_wrapper {
+        grid-row-gap: 5.87vw;
+    }
+
+    .services_item {
+        height: 59.7vw;
+    }
+
+    .services_item:first-child {
+        margin-bottom: 13.33333vw;
+    }
+
+    .services_content, .services_item:last-child .services_content {
+        width: 50.67vw;
+    }
+
+    .services_header {
+        font-size: 5.333vw;
+        line-height: 6.4vw;
+        margin-bottom: 3.73vw;
+    }
+
+    .services_paragraph {
+        font-size: 3.73vw;
+        line-height: 4.6666vw;
+        margin-bottom: 3.7vw;
+    }
+
+    .services_link {
+        height: 10.67vw;
+        font-size: 3.73vw;
     }
 }
 
