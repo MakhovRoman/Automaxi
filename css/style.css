@@ -406,6 +406,185 @@ body {
     transition: 0.2s linear;
 }
 
+.glasses {
+    margin-top: 69px;
+    margin-bottom: 70px;
+}
+
+.glasses_header {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 36px;
+}
+
+.glasses_select {
+    font-size: 14px;
+    padding: 4px 0 3px 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 190px;
+    border: 1px solid #B4B4B4;
+    background-color: #EEEEEE;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.glasses_select + .glasses_select {
+    margin-left: 10px;
+}
+
+.glasses_select:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+}
+
+.glasses_select::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.glasses_select:focus::placeholder {
+    color: transparent;
+}
+
+.glasses_submit {
+    position: relative;
+    margin-left: 50px;
+    width: 120px;
+    height: 28px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(90, 161, 225);
+    border: none;
+    cursor: pointer;
+}
+
+.glasses_submit::before, .glasses_showmore::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 153, 7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.glasses_submit::after, .glasses_showmore::after {
+    content: "Подобрать";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.glasses_submit:hover::before, .glasses_showmore:hover::before {
+    transform: scaleY(1);
+    transition: 0.2s ease-in-out;
+}
+
+.glasses_submit:hover::after, .glasses_showmore:hover::after {
+    transition: 0.2s ease-in-out;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    z-index: 3;
+}
+
+.glasses_submit:hover .glasses_textSubmit {
+    color: rgb(0, 0, 0);
+    transition: 0.2s ease-in-out;
+}
+
+.glasses_textSubmit {
+    z-index: 3 ;
+    transition: 0.2s ease-in-out;
+    color: rgb(255, 255, 255);
+}
+
+.glasses_grid {
+    display: grid;
+    grid-template-columns: repeat(9, 110px);
+    grid-template-rows: repeat(5, 100px);
+    grid-row-gap: 20px;
+    grid-column-gap: 21px;
+    margin-top: 40px;
+}
+
+.glasses_model {
+    width: 100%;
+    justify-self: center;
+    box-sizing: border-box;
+    border: 1px solid #B4B4B4;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+.glasses_model:hover {
+    box-shadow: 0px 0px 5px 2px rgba(34, 60, 80, 0.2);;
+    background-color: rgba(212, 151, 57, 0.35);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.glasses_modelLabel, .glasses_modelLogo {
+    text-align: center;
+    margin-top: 6px;
+}
+
+#showmore {
+    display: none;
+}
+
+.glasses_showmore {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0 auto;
+    background-color: rgb(90, 161, 225);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+}
+
+.glasses_showmore::after {
+    content: "Показать еще";
+}
+
+#showmore + label ~ div {
+    display: none;
+    transform-origin: top;
+    transition: 0.3s ease-in-out;
+}
+
+#showmore:checked+label~div {
+    display: grid;
+    animation: showmore 0.3s ease-in-out;
+}
+
+#showmore:checked + label {
+    display: none;
+}
+
+@keyframes showmore {
+    from {transform: scaleY(0);}
+    to {transform: scaleY(1);}
+}
+
+.glasses_gridSmall {
+    margin-top: 20px;
+    grid-template-rows: repeat(2, 100px);
+}
 
 .reitings {
     height: auto;
