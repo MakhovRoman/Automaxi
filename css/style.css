@@ -1038,6 +1038,28 @@ body {
         width: 91.6996vw;
     }
 
+    .glasses_grid {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(9, 9.48%);
+        grid-template-rows: repeat(5, 7.9vw);
+        grid-gap: 1.58vw;
+    }
+
+    .glasses_gridSmall {
+        grid-template-rows: repeat(2, 7.9vw);
+    }
+
+    .glasses_modelLogo, .glasses_modelLabel {
+        margin-top: 0.47vw;
+        font-size: 1.265vw;
+    }
+
+    .glasses_modelLogo img {
+        width: 45.45%;
+        height: auto;
+    }
+
     .reitings_wrapper{
         justify-content: center;
     }
@@ -1111,6 +1133,40 @@ body {
         width: 91.6vw;
         margin: 0 auto;
         grid-template-columns: 150px 1fr 167px 1fr 140px 1fr 116px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .glasses_select {
+        font-size: 1.31vw;
+        padding: 0.37vw 0 0.28vw 0.93vw;
+        width: 17.757vw;
+    }
+
+    .glasses_select + .glasses_select {
+        margin-left: 0.93vw;
+    }
+
+    .glasses_grid {
+        margin-top: 3.74vw;
+    }
+
+    .glasses_gridSmall {
+        margin-top: 1.87vw;
+    }
+
+    .glasses_submit {
+        margin-left: 4.673vw;
+        width: 11.21vw;
+        height: 2.43vw;
+        font-size: 1.31vw;
+    }
+
+    .glasses_showmore {
+        width: 18.69vw;
+        height: 3.74vw;
+        margin-top: 3.74vw;
+        font-size: 1.5vw;
     }
 }
 
@@ -1280,6 +1336,34 @@ body {
         font-size: 16px;
         width: 200px;
         height: 40px;
+    }
+
+    .glasses_header {
+        font-size: 2.6vw;
+        margin-bottom: 3.39vw;
+        line-height: 3.125vw;
+    }
+
+    .glasses_select {
+        width: 23.44vw;
+        height: 3.65vw;
+        font-size: 1.5625vw;
+    }
+
+    .glasses_select + .glasses_select {
+        margin-left: 2.6vw;
+    }
+
+    .glasses_select:nth-child(4) {
+        margin-left: 0;
+        margin-top: 2.6vw;
+    }
+
+    .glasses_submit {
+        width: 15.625vw;
+        height: 3.65vw;
+        margin-left: 2.6vw;
+        font-size: 1.82vw;
     }
 
     .reitings_wrapper {
