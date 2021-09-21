@@ -1366,6 +1366,29 @@ body {
         font-size: 1.82vw;
     }
 
+    .glasses_grid {
+        grid-template-columns: repeat(6, 90px);
+        grid-template-rows: repeat(6, 90px);
+        grid-gap: 15px;
+    }
+
+    .glasses_gridSmall .glasses_model:first-child{
+        grid-column: 4/5;
+    }
+
+    .glasses_gridSmall {
+        margin-top: -90px;
+    }
+
+    .glasses_modelLabel {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .glasses_hiden {
+        display: none;
+    }
+
     .reitings_wrapper {
         margin-top: 20px;
     }
@@ -1559,6 +1582,21 @@ body {
 
     .user_link:first-child img {
         padding-left: 1.18vw;
+    }
+
+    .glasses_grid {
+        grid-template-columns: repeat(6, 13.274vw);
+        grid-template-rows: repeat(6, 13.274vw);
+        grid-gap: 2.21vw;
+    }
+
+    .glasses_modelLabel {
+        font-size: 2.06vw;
+        margin-top: 1.475vw;
+    }
+
+    .glasses_gridSmall {
+        margin-top: -13.274vw;
     }
 
     .reitings_wrapper {
