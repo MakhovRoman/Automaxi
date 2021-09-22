@@ -1973,6 +1973,10 @@ body {
         grid-gap: 15px;
     }
 
+    .glasses_gridSmall {
+        grid-template-rows: repeat(6, 90px);
+    }
+
     .glasses_gridSmall .glasses_model:first-child {
         grid-column: 1/2;
     }
