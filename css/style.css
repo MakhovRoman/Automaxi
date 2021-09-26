@@ -457,7 +457,7 @@ body {
     cursor: pointer;
 }
 
-.glasses_submit::before, .glasses_showmore::before {
+.glasses_submit::before, .glasses_showmore::before, .itemsToInstall_link::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -471,7 +471,7 @@ body {
     z-index: 1;
 }
 
-.glasses_submit::after, .glasses_showmore::after {
+.glasses_submit::after, .glasses_showmore::after, .itemsToInstall_link::after {
     content: "Подобрать";
     position: absolute;
     display: flex;
@@ -485,12 +485,12 @@ body {
     transition: 0.2s ease-in-out;
 }
 
-.glasses_submit:hover::before, .glasses_showmore:hover::before {
+.glasses_submit:hover::before, .glasses_showmore:hover::before, .itemsToInstall_link:hover::before {
     transform: scaleY(1);
     transition: 0.2s ease-in-out;
 }
 
-.glasses_submit:hover::after, .glasses_showmore:hover::after {
+.glasses_submit:hover::after, .glasses_showmore:hover::after, .itemsToInstall_link:hover::after {
     transition: 0.2s ease-in-out;
     color: rgb(0, 0, 0);
     opacity: 1;
@@ -589,6 +589,7 @@ body {
     grid-column-gap: 40px;
     white-space: nowrap;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .itemsToInstall_wrapper::-webkit-scrollbar {
@@ -596,7 +597,63 @@ body {
 }
 
 .itemsToInstall_item {
-    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    border: 1px solid #B4B4B4;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 24px 30px 41px 30px;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itemsToInstall_image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.itemsToInstall_buy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+}
+
+.itemsToInstall_price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.itemsToInstall_link {
+    width: 78px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(90, 161, 225);
+    position: relative;
+}
+
+.itemsToInstall_catalog {
+    width: 200px;
+    height: 40px;
+    margin: 40px auto 70px auto;
+}
+
+.itemsToInstall_link::after {
+    content: "Купить";
+}
+
+.itemsToInstall_catalog::after {
+    content: "Перейти в каталог";
 }
 
 .reitings {
@@ -1397,6 +1454,22 @@ body {
         display: none;
     }
 
+    .itemsToInstall_wrapper {
+        grid-template-columns: repeat(2, 48.39%);
+        grid-template-rows: repeat(2, 330px);
+        white-space: normal;
+        height: auto;
+        grid-gap: 20px;
+    }
+
+    .itemsToInstall_label {
+        font-size: 14px;
+    }
+
+    .itemsToInstall_price {
+        font-size: 14px;
+    }
+
     .reitings_wrapper {
         margin-top: 20px;
     }
@@ -1605,6 +1678,46 @@ body {
 
     .glasses_gridSmall {
         margin-top: -13.274vw;
+        grid-template-rows: repeat(4, 13.274vw);
+    }
+
+    .itemsToInstall_wrapper {
+        grid-template-rows: repeat(2, 48.67vw);
+        grid-gap: 2.95vw;
+    }
+
+    .itemsToInstall_item {
+        padding: 3.54vw 4.42vw 6.05vw 4.42vw;
+    }
+
+    .itemsToInstall_image {
+        margin-bottom: 1.92vw;
+    }
+
+    .itemsToInstall_image img {
+        width: 17.85vw;
+        height: auto;
+    }
+
+    .itemsToInstall_image__size_large img {
+        width: 28.02vw;
+    }
+
+    .itemsToInstall_label, .itemsToInstall_price, .itemsToInstall_link {
+        font-size: 2.06vw;
+    }
+
+    .itemsToInstall_buy {
+        height: 4.42vw;
+    }
+
+    .itemsToInstall_link {
+        width: 11.5vw;
+    }
+
+    .itemsToInstall_catalog {
+        width: 29.5vw;
+        height: 5.9vw;
     }
 
     .reitings_wrapper {
@@ -1982,7 +2095,7 @@ body {
     }
 
     .glasses_gridSmall {
-        grid-template-rows: repeat(6, 90px);
+        grid-template-rows: repeat(4, 90px);
     }
 
     .glasses_gridSmall .glasses_model:first-child {
@@ -2000,6 +2113,47 @@ body {
     .glasses_modelLabel {
         font-size: 14px;
         margin-top: 10px;
+    }
+
+    .itemsToInstall_wrapper {
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(2, 308px);
+        grid-gap: 20px;
+    }
+
+    .itemsToInstall_item * {
+        margin: 0;
+    }
+
+    .itemsToInstall_item {
+        padding: 30px 5px;
+    }
+
+    .itemsToInstall_label, .itemsToInstall_price, .itemsToInstall_link {
+        font-size: 14px;
+    }
+
+    .itemsToInstall_buy {
+        flex-direction: column;
+        height: fit-content;
+        justify-content: unset;
+    }
+
+    .itemsToInstall_link {
+        width: 78px;
+        height: 30px;
+        border: 2px;
+        margin-top: 17px;
+    }
+
+    .itemsToInstall_image img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .itemsToInstall_catalog {
+        width: 100%;
+        height: 40px;
     }
 
     .feedback {
