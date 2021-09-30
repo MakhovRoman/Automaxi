@@ -572,6 +572,11 @@ body {
     animation: showmore 0.3s ease-in-out;
 }
 
+@keyframes showmore {
+    from {transform: scaleY(0);}
+    to {transform: scaleY(1);}
+}
+
 #showmore:checked + label {
     display: none;
 }
@@ -1959,19 +1964,7 @@ body {
         transition: 0.3s ease-in-out;
     }
 
-    #header_toogle:checked ~ .header_button > span::after {
-        top: -11.5px;
-        left: -2.5px;
-        transform-origin: 50% 50%;
-        transform: rotate(-45deg);
-        height: 20px;
-        border-radius: 50%;
-        background-color: transparent;
-        border: 3px solid rgb(255, 255, 255);
-        transition: 0.3s ease-in-out;
-    }
-
-    #header_toogle:checked ~ .header_button > span::before {
+    #header_toogle:checked ~ .header_button > span::before, #header_toogle:checked ~ .header_button > span::after {
         top: 0;
         transform: rotate(90deg);
         transition: 0.3s ease-in-out;
