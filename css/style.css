@@ -1901,7 +1901,7 @@ body {
 
     .header_linkList {
         flex-direction: column;
-        z-index: 10;
+        z-index: 20;
         position: fixed;
         left: 0;
         top: 31.75px;
@@ -1950,6 +1950,7 @@ body {
         margin-top: 0;
         background-color: rgb(184, 183, 178);
         padding: 0;
+        z-index: 20;
     }
 
     .header_item, .header_links, .header_subLinkList{
@@ -1965,7 +1966,13 @@ body {
         transition: 0.3s ease-in-out;
     }
 
-    #header_toogle:checked ~ .header_button > span::before, #header_toogle:checked ~ .header_button > span::after {
+    #header_toogle:checked ~ .header_button > span::after {
+        top: 0;
+        transform: rotate(90deg);
+        transition: 0.3s ease-in-out;
+    }
+
+    #header_toogle:checked ~ .header_button > span::before {
         top: 0;
         transform: rotate(90deg);
         transition: 0.3s ease-in-out;
@@ -1977,6 +1984,18 @@ body {
         opacity: 1;
         transition: 0.3s ease-in-out;
         transform: scaleY(1);
+    }
+
+    .header_top {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 31.75px;
+        z-index: 20;
+    }
+
+    .header_bot {
+        margin-top: 31.75px;
     }
 
     .banner {
